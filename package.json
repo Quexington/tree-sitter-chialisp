@@ -1,0 +1,17 @@
+{
+  "name": "tree-sitter-chialisp",
+  "version": "1.0.3",
+  "description": "A Tree-sitter parser for the new language to build on top of the Chia blockchain: Chialisp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "quexington",
+  "license": "ISC",
+  "dependencies": {
+    "nan": "^2.14.2"
+  },
+  "devDependencies": {
+    "tree-sitter-cli": "^0.18.1"
+  }
+}
