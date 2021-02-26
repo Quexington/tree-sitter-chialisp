@@ -1,4 +1,4 @@
-#tree-sitter-chialisp
+# tree-sitter-chialisp
 A tree-sitter parser for Chialisp, the language used to build smart coins on top of the Chia blockchain.
 
 There is also an atom package that uses this parser that you can find [here](https://github.com/Quexington/language-chialisp) or through the atom package installer.
