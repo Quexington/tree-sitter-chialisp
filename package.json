@@ -1,7 +1,7 @@
 {
   "name": "tree-sitter-chialisp",
-  "version": "1.0.3",
-  "description": "A Tree-sitter parser for the new language to build on top of the Chia blockchain: Chialisp",
+  "version": "1.0.4",
+  "description": "A tree-sitter parser for Chialisp, the language used to build smart coins on top of the Chia blockchain.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
