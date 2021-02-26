@@ -126,6 +126,10 @@
         {
           "type": "function_call",
           "named": true
+        },
+        {
+          "type": "list_op",
+          "named": true
         }
       ]
     }

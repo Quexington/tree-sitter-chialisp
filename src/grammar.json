@@ -311,7 +311,7 @@
       "members": [
         {
           "type": "PATTERN",
-          "value": "\\((c|f|r|l|list)\\s+"
+          "value": "\\((c|f|r|l|a|list)\\s+"
         },
         {
           "type": "REPEAT",
@@ -343,8 +343,17 @@
           "value": "("
         },
         {
-          "type": "SYMBOL",
-          "name": "function_call"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "function_call"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "list_op"
+            }
+          ]
         },
         {
           "type": "STRING",
@@ -444,7 +453,7 @@
       "members": [
         {
           "type": "PATTERN",
-          "value": "\\((qq|q|unquote)\\s+"
+          "value": "\\((qq|q|unquote)\\s+[\\.]*\\s*"
         },
         {
           "type": "REPEAT",

@@ -77,14 +77,14 @@ module.exports = grammar({
     constant_ref: $ => /[A-Z0-9_-]+/,
 
     list_op: $ => seq(
-      /\((c|f|r|l|list)\s+/,
+      /\((c|f|r|l|a|list)\s+/,
       repeat(choice($.comment,$.statement)),
       ')'
     ),
 
     list: $ => seq(
       '(',
-      $.function_call,
+      choice($.function_call,$.list_op),
       ')',
     ),
 
@@ -107,7 +107,7 @@ module.exports = grammar({
     ),
 
     quote: $ => seq(
-      /\((qq|q|unquote)\s+/,
+      /\((qq|q|unquote)\s+[\.]*\s*/,
       repeat(choice($.comment,$.statement)),
       ')'
     ),
