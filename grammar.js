@@ -5,7 +5,7 @@ module.exports = grammar({
     source_file: $ => repeat($._definition),
 
     _definition: $ => choice(
-      $.mod_definition,
+      $.statement,
       $.comment
     ),
 
@@ -26,6 +26,7 @@ module.exports = grammar({
     comment: $ => /;.*\r\n/,
 
     statement: $ => choice(
+      $.mod_definition,
       $.primitive,
       $.variable,
       $.function_def,
@@ -46,10 +47,12 @@ module.exports = grammar({
       $.hexadecimal,
       $.integer,
       $.string,
+      $.false,
     ),
     hexadecimal: $ => /0x[0-9a-fA-F]+/,
     integer: $ => /\d+/,
     string: $ => /([\"'`])(?:[\s\S])*?.*([\"'`])/,
+    false: $ => "()",
 
     variable: $ => /[a-zA-Z0-9_-]+/,
 

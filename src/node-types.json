@@ -255,6 +255,10 @@
       "required": true,
       "types": [
         {
+          "type": "false",
+          "named": true
+        },
+        {
           "type": "hexadecimal",
           "named": true
         },
@@ -320,7 +324,7 @@
           "named": true
         },
         {
-          "type": "mod_definition",
+          "type": "statement",
           "named": true
         }
       ]
@@ -364,6 +368,10 @@
         },
         {
           "type": "list_op",
+          "named": true
+        },
+        {
+          "type": "mod_definition",
           "named": true
         },
         {
@@ -416,6 +424,10 @@
   },
   {
     "type": "constant_ref",
+    "named": true
+  },
+  {
+    "type": "false",
     "named": true
   },
   {

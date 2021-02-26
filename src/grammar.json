@@ -13,7 +13,7 @@
       "members": [
         {
           "type": "SYMBOL",
-          "name": "mod_definition"
+          "name": "statement"
         },
         {
           "type": "SYMBOL",
@@ -113,6 +113,10 @@
       "members": [
         {
           "type": "SYMBOL",
+          "name": "mod_definition"
+        },
+        {
+          "type": "SYMBOL",
           "name": "primitive"
         },
         {
@@ -183,6 +187,10 @@
         {
           "type": "SYMBOL",
           "name": "string"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "false"
         }
       ]
     },
@@ -197,6 +205,10 @@
     "string": {
       "type": "PATTERN",
       "value": "([\\\"'`])(?:[\\s\\S])*?.*([\\\"'`])"
+    },
+    "false": {
+      "type": "STRING",
+      "value": "()"
     },
     "variable": {
       "type": "PATTERN",
