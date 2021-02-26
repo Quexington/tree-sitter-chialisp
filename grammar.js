@@ -5,7 +5,8 @@ module.exports = grammar({
     source_file: $ => repeat($._definition),
 
     _definition: $ => choice(
-      $.mod_definition
+      $.mod_definition,
+      $.comment
     ),
 
     mod_definition: $ => seq(
